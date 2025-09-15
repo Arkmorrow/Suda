@@ -37,17 +37,17 @@ namespace SudaLib
         private static WebServer _server;
         private static TaskCompletionSource<string> _authCodeTaskSource;
 
-        public static async Task WorkBeforeLogin(Action<object> action)
+        public static async Task WorkBeforeLogin(Action<bool, string> action)
         {
             try
             {
                 // Start the local server for OAuth callback
                 await StartCallbackServer();
-                action?.Invoke((true, "Server started successfully"));
+                action?.Invoke(true, "Server started successfully");
             }
             catch (Exception ex)
             {
-                action?.Invoke((false, $"Failed to start server: {ex.Message}"));
+                action?.Invoke(false, $"Failed to start server: {ex.Message}");
             }
         }
 

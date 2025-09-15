@@ -141,7 +141,18 @@ namespace Suda.Pages
             else if (type == ePlatform.Spotify)
             {
                 WebUrl = Spotify.GetLoginUrl();
-                await Spotify.WorkBeforeLogin((x) => { TryLogin(x); });
+                await Spotify.WorkBeforeLogin((success, message) => { 
+                    if (success)
+                    {
+                        // For Spotify OAuth, handle success
+                        System.Windows.MessageBox.Show("Spotify server started. Please complete authentication in your browser.", "Info");
+                    }
+                    else
+                    {
+                        // Handle error
+                        System.Windows.MessageBox.Show($"Spotify authentication failed: {message}", "Error");
+                    }
+                });
             }
 
             return;
