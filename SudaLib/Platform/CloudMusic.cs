@@ -349,7 +349,7 @@ namespace SudaLib
                     Cookie:container,
                     PostJson: data,
                     Headers: Headers);
-                return (result.Errresponse, result.sData);
+                return (result.Errresponse.ToString(), result.sData);
             }
             catch (Exception e)
             {

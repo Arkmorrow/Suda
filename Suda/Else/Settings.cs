@@ -34,8 +34,8 @@ namespace Suda.Else
 
         public bool Save()
         {
-            string data = JsonHelper.ConverObjectToString<Settings>(this,true);
-            return FileHelper.Write(data, true, Global.PATH_SETTINGS);
+            string data = JsonHelper.ConverObjectToString<Settings>(this);
+            return FileHelper.Write(Global.PATH_SETTINGS, data);
         }
 
         public static Settings Read()

@@ -28,7 +28,6 @@ namespace Suda.Pages
 
         public bool CheckRequire()
         {
-            return true;
             string file = "./libcef.dll";
             return File.Exists(file);
         }
@@ -47,7 +46,10 @@ namespace Suda.Pages
                 return false;
             }
 
-            DownloadFileHepler.StartAsync(Global.URL_REQUIRE, Global.PATH_REQUIRE, null, UpdateDownloadNotify, CompleteDownloadNotify, ErrDownloadNotify, 3);
+            DownloadFileHelper.StartAsync(Global.URL_REQUIRE, Global.PATH_REQUIRE, null, 
+                (obj) => UpdateDownloadNotify(0, (long)obj, 0, null), 
+                (obj) => CompleteDownloadNotify(0, obj), 
+                (obj) => ErrDownloadNotify(0, 0, obj?.ToString(), null), 3);
             return true;
         }
 

@@ -15,8 +15,8 @@ namespace Suda.Pages
     {
         public Settings Settings { get; set; }
         
-        public List<Language.Type> LanguageCombox { get; set; } = AIGS.Common.Convert.ConverEnumToList<Language.Type>(); 
-        public List<Theme.Type> ThemeCombox { get; set; } = AIGS.Common.Convert.ConverEnumToList<Theme.Type>(); 
+        public List<Language.Type> LanguageCombox { get; set; } = Enum.GetValues(typeof(Language.Type)).Cast<Language.Type>().ToList(); 
+        public List<Theme.Type> ThemeCombox { get; set; } = Enum.GetValues(typeof(Theme.Type)).Cast<Theme.Type>().ToList(); 
 
         public void Load()
         {

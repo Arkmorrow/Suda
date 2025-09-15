@@ -611,22 +611,12 @@ namespace SudaLib
             return "My Favorite";
         }
 
-        public static object GetImageObj(string url)
+        public static string MergeArtistsName(ObservableCollection<Artist> artists)
         {
-            try
-            {
-                if (url.IsBlank())
-                    return null;
-
-                object data = AIGS.Common.Convert.ConverByteArrayToBitmapImage(NetHelper.DownloadData(url));
-                if (data == null)
-                    return "https://i.loli.net/2020/07/29/hgXxGae51fDVHQJ.jpg";
-                return data;
-            }
-            catch
-            {
-                return url;
-            }
+            if (artists == null || artists.Count == 0)
+                return "";
+            
+            return string.Join(", ", artists.Select(a => a.Name));
         }
 #endregion
     }

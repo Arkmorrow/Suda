@@ -30,7 +30,7 @@ namespace Suda.Else
 
             string data = JsonHelper.ConverObjectToString<Cache>(this);
             string edata = EncryptHelper.Encode(data, Global.KEY_CACHE);
-            FileHelper.Write(edata, true, Global.PATH_CACHE);
+            FileHelper.Write(Global.PATH_CACHE, edata);
         }
 
         public static Cache Read()

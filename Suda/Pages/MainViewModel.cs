@@ -45,9 +45,9 @@ namespace Suda.Pages
         public List<object> VMList { get; set; } = new List<object>();
         public ViewManager VMManager { get; set; }
 
-        public MainViewModel(ViewManager manager)
+        public MainViewModel(IViewManager viewManager)
         {
-            VMManager = manager;
+            VMManager = (ViewManager)viewManager;
             VMList.Add(VMLogin);
             VMList.Add(VMUpload);
             VMList.Add(VMAbout);
@@ -409,7 +409,7 @@ namespace Suda.Pages
             try
             {
                 string sTxt = JsonHelper.ConverObjectToString<ObservableCollection<Playlist>>(SudaPlaylists);
-                flag = FileHelper.Write(sTxt, true, Global.PATH_SUDA_PLAYLIST);
+                flag = FileHelper.Write(Global.PATH_SUDA_PLAYLIST, sTxt);
                 Dialog.Show(new MessageView(MessageBoxImage.Information, Language.Get("strmsgSaveSuccess"), false));
             }
             catch (Exception e)

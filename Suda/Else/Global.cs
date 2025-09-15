@@ -1,6 +1,7 @@
 ﻿using AIGS.Common;
 using AIGS.Helper;
 using Suda.Pages;
+using SudaLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,7 @@ namespace Suda.Else
         public static string KEY_CACHE = "38&*hjkfsau)(#";
 
         //Global DynamicResource
-        public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;
+        public static event PropertyChangedEventHandler StaticPropertyChanged;
 
         private static bool _InUploading = false;
         public static bool InUploading { get { return _InUploading; } set { _InUploading = value; OnPropertyChangedStatic(StaticPropertyChanged); } }

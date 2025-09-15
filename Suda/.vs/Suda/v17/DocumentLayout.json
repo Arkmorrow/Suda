@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\steve\\Downloads\\Suda\\Suda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3018E553-AEEC-408D-87E1-5D65FCE2F3EE}|Suda.csproj|c:\\users\\steve\\downloads\\suda\\suda\\properties\\controlresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3018E553-AEEC-408D-87E1-5D65FCE2F3EE}|Suda.csproj|solutionrelative:properties\\controlresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControlResources.xaml",
+              "DocumentMoniker": "C:\\Users\\steve\\Downloads\\Suda\\Suda\\Properties\\ControlResources.xaml",
+              "RelativeDocumentMoniker": "Properties\\ControlResources.xaml",
+              "ToolTip": "C:\\Users\\steve\\Downloads\\Suda\\Suda\\Properties\\ControlResources.xaml",
+              "RelativeToolTip": "Properties\\ControlResources.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T17:20:53.831Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

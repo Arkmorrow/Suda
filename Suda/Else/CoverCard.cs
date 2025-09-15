@@ -63,7 +63,7 @@ namespace Suda.Else
             pCards.Add(card3);
 
             string sjson = JsonHelper.ConverObjectToString<ObservableCollection<CoverCard>>(pCards);
-            FileHelper.Write(sjson, true, "./covercards.json");
+            FileHelper.Write("./covercards.json", sjson);
 
             return pCards;
         }
